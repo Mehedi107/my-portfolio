@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <Preloader />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
-          {children}
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

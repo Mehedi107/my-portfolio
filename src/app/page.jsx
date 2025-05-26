@@ -12,6 +12,8 @@ import { projects, skills } from '@/data/data';
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function Home() {
   return (
@@ -92,6 +94,81 @@ export default function Home() {
             </Card>
           ))}
         </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 max-w-4xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-10">Contact Me</h2>
+
+        <Card className="shadow-xl">
+          <CardContent className="p-8">
+            <form
+              action="https://formsubmit.co/your@email.com"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* Hidden field for redirect */}
+              <input
+                type="hidden"
+                name="_next"
+                value="https://yourdomain.com/thanks"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Name
+                </label>
+                <Input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Email
+                </label>
+                <Input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Message
+                </label>
+                <Textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  placeholder="Type your message..."
+                  required
+                />
+              </div>
+
+              <Button type="submit" className="w-full">
+                Send Message
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </section>
     </>
   );
