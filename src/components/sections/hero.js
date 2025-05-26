@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { SocialLinkDock } from '../social';
 
 export default function HeroSection() {
   return (
@@ -10,13 +11,14 @@ export default function HeroSection() {
           {/* Left: Text Content */}
           <div className="flex-1 space-y-6 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-              Hi, I'm <span className="text-test-color">Mehedi</span>
+              Hi, I'm <span className="text-test-color">Mehedi 👋</span>
             </h1>
             <p className="text-muted-foreground text-lg">
               I’m a passionate front-end developer specializing in building
               beautiful, accessible, and fast web applications using modern
               technologies like React, Tailwind, and Next.js.
             </p>
+            <SocialLinkDock />
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:justify-start">
               <Button size="lg">
                 View Projects
