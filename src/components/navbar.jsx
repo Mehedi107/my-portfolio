@@ -5,8 +5,8 @@ import { ThemeToggle } from './theme-toggle';
 
 export default function Navbar() {
   return (
-    <header className="w-full h-16 px-4 border-b flex items-center justify-between  sticky top-0 z-50">
-      <Link href="/" className="text-xl font-bold text-primary hidden md:block">
+    <header className="w-full h-16 px-4 flex items-center justify-between  sticky top-0 z-50 backdrop-blur-xs">
+      <Link href="/" className="text-xl font-bold hidden md:block">
         Logo
       </Link>
       {/* Mobile Nav (Sheet) */}

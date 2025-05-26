@@ -1,58 +1,76 @@
 'use client';
 
-import { Button } from './ui/button';
-import { Card, CardContent } from './ui/card';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-background text-foreground">
-      <div className="mx-auto px-4 max-w-7xl space-y-10">
-        {/* Heading */}
-        <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tight">About Me</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            I'm a front-end developer with a strong passion for building modern,
-            user-centric web applications. My journey started with HTML, CSS,
-            and JavaScript, and has grown into creating responsive, accessible
-            interfaces using React, Tailwind CSS, and Next.js. I’ve also
-            explored full-stack development using the MERN stack and built
-            several real-world projects like task managers, product hunt clones,
-            and language learning apps. I focus on writing clean, scalable code
-            and continuously learning new tools to improve my workflow.
-          </p>
-        </div>
+    <section className="py-20 px-6 md:px-20 bg-background">
+      <div className="max-w-6xl mx-auto space-y-8 text-center">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          About Me
+        </motion.h2>
 
-        {/* Tools & Technologies */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Tech Stack & Tools</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {[
-              'React.js',
-              'Next.js',
-              'Tailwind CSS',
-              'ShadCN UI',
-              'Node.js',
-              'Express.js',
-              'MongoDB',
-              'Firebase',
-              'Git & GitHub',
-              'Vite',
-              'Valentina Studio',
-              'Stripe Integration',
-            ].map(tool => (
-              <Card key={tool}>
-                <CardContent className="p-4 text-center text-sm font-medium text-muted-foreground">
-                  {tool}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <motion.p
+          className="text-muted-foreground text-lg leading-relaxed  max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+        >
+          I’m a Frontend Developer with a passion for building sleek, responsive
+          web applications using
+          <span className="font-medium text-foreground"> React</span>,
+          <span className="font-medium text-foreground"> Next.js</span>, and
+          <span className="font-medium text-foreground"> Tailwind CSS</span>. I
+          focus on clean UI, accessibility, and performance. Beyond the code, I
+          love solving problems and learning new things every day.
+        </motion.p>
 
-        {/* Resume Button */}
-        <div>
+        <motion.div
+          className="grid md:grid-cols-3 gap-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold">Tech Stack</h3>
+              <p className="text-muted-foreground mt-2">
+                React, Next.js, Tailwind, Node.js
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold">Experience</h3>
+              <p className="text-muted-foreground mt-2">
+                Built several full-stack projects with modern tools
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold">Soft Skills</h3>
+              <p className="text-muted-foreground mt-2">
+                Team player, quick learner, great communicator
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
           <Button variant="default">Download Resume</Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
