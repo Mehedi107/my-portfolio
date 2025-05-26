@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import NavBar from '@/components/navbar';
+import NavBar from '@/components/header';
 import { ThemeProvider } from 'next-themes';
 import Preloader from '@/components/preloader';
 import { Footer } from '@/components/sections/footer';

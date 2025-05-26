@@ -3,11 +3,12 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
 
 export default function AboutSection() {
   return (
-    <section className="py-20 px-6 md:px-20 bg-background">
-      <div className="max-w-6xl mx-auto space-y-8 text-center">
+    <section>
+      <div className="wrapper">
         <motion.h2
           className="text-3xl md:text-4xl font-bold"
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +19,7 @@ export default function AboutSection() {
         </motion.h2>
 
         <motion.p
-          className="text-muted-foreground text-lg leading-relaxed  max-w-4xl mx-auto"
+          className="text-muted-foreground text-lg leading-relaxed  max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
@@ -69,7 +70,9 @@ export default function AboutSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <Button variant="default">Download Resume</Button>
+          <Button variant="default">
+            Download Resume <Download />
+          </Button>
         </motion.div>
       </div>
     </section>
