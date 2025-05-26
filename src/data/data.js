@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     name: 'TaskMate',
     image: '/avatar.png',
@@ -31,4 +31,18 @@ const projects = [
   },
 ];
 
-export default projects;
+export const skills = [
+  {
+    category: "Frontend",
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Tailwind CSS", "ShadCN UI"],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "Express.js", "MongoDB", "Firebase"],
+  },
+  {
+    category: "Tools",
+    items: ["Git", "GitHub", "Figma", "Postman", "Vercel", "Netlify"],
+  },
+];
+
