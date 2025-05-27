@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: 1,
     name: 'TaskMate',
     image: '/avatar.png',
     techStack: ['React', 'Firebase', 'Tailwind CSS'],
@@ -10,6 +11,7 @@ export const projects = [
     slug: 'taskmate',
   },
   {
+    id: 2,
     name: 'Foodie Finds',
     image: '/avatar.png',
     techStack: ['Next.js', 'MongoDB', 'ShadCN UI'],
@@ -20,6 +22,7 @@ export const projects = [
     slug: 'foodie-finds',
   },
   {
+    id: 3,
     name: 'LangBuddy',
     image: '/avatar.png',
     techStack: ['React', 'Firebase', 'Framer Motion'],
@@ -33,16 +36,29 @@ export const projects = [
 
 export const skills = [
   {
-    category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Tailwind CSS", "ShadCN UI"],
+    animationDelay: 0,
+    id: 1,
+    category: 'Frontend',
+    items: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React.js',
+      'Next.js',
+      'Tailwind CSS',
+      'ShadCN UI',
+    ],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB", "Firebase"],
+    animationDelay: 2,
+    id: 2,
+    category: 'Backend',
+    items: ['Node.js', 'Express.js', 'MongoDB', 'Firebase'],
   },
   {
-    category: "Tools",
-    items: ["Git", "GitHub", "Figma", "Postman", "Vercel", "Netlify"],
+    animationDelay: 5,
+    id: 3,
+    category: 'Tools',
+    items: ['Git', 'GitHub', 'Figma', 'Postman', 'Vercel', 'Netlify'],
   },
 ];
-

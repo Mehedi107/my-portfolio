@@ -2,6 +2,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { SocialLinkDock } from '../social';
+import { ShineBorder } from '../magicui/shine-border';
+import { AuroraText } from '../magicui/aurora-text';
 
 export default function HeroSection() {
   return (
@@ -11,7 +13,7 @@ export default function HeroSection() {
           {/* Left: Text Content */}
           <div className="flex-1 space-y-6 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-              Hi, I'm <span className="text-test-color">Mehedi 👋</span>
+              Hi, I'm <AuroraText>Mehedi</AuroraText> 👋
             </h1>
             <p className="text-muted-foreground text-lg">
               I’m a passionate front-end developer specializing in building
@@ -31,14 +33,17 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Profile Image */}
-          <div className="flex-1 flex justify-center">
-            <Image
-              src="/avatar.png"
-              alt="Your Name"
-              width={300}
-              height={300}
-              className="rounded-full border shadow-lg object-cover"
-            />
+          <div className="flex-1 flex justify-center ">
+            <div className="h-72 w-72 rounded-full border shadow-lg relative overflow-hidden">
+              <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} />
+              <Image
+                src="/avatar.png"
+                alt="Your Name"
+                width={280}
+                height={280}
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
