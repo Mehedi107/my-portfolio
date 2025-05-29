@@ -7,8 +7,9 @@ import { useTheme } from 'next-themes';
 
 export default function SkillSection() {
   const { theme } = useTheme();
+
   return (
-    <section>
+    <section id="skills">
       <div className="wrapper">
         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
         <div className="grid gap-8 md:grid-cols-3 items-start">

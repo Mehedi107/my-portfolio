@@ -24,9 +24,10 @@ export default function MobileMenu() {
         </SheetHeader>
         <div className="flex flex-col gap-6 mt-4">
           <nav className="flex flex-col gap-4 text-base text-center">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="#">About</NavLink>
-            <NavLink href="#">Projects</NavLink>
+            <NavLink href="/#hero">Home</NavLink>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
+            <NavLink href="#skills">Skills</NavLink>
             <NavLink href="#">Contact</NavLink>
           </nav>
         </div>

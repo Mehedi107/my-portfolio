@@ -16,7 +16,7 @@ import { Lens } from '../magicui/lens';
 
 export default function ProjectSection() {
   return (
-    <section>
+    <section id="projects">
       <div className="wrapper">
         <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">

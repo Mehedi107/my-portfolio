@@ -1,13 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import { SocialLinkDock } from '../social';
 import { ShineBorder } from '../magicui/shine-border';
 import { AuroraText } from '../magicui/aurora-text';
 
 export default function HeroSection() {
   return (
-    <section>
+    <section id="hero">
       <div className="wrapper">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-10 ">
           {/* Left: Text Content */}
@@ -20,7 +19,7 @@ export default function HeroSection() {
               beautiful, accessible, and fast web applications using modern
               technologies like React, Tailwind, and Next.js.
             </p>
-            <SocialLinkDock />
+
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:justify-start">
               <Button size="lg">
                 View Projects

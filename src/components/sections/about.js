@@ -8,7 +8,7 @@ import { ConfettiButton } from '../magicui/confetti';
 
 export default function AboutSection() {
   return (
-    <section>
+    <section id="about">
       <div className="wrapper flex flex-col md:flex-row items-center">
         {/* left content */}
         <div className="w-full md:w-1/2">

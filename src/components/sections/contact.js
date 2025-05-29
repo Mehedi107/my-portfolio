@@ -5,7 +5,7 @@ import { Textarea } from '../ui/textarea';
 
 export default function ContactSection() {
   return (
-    <section>
+    <section id="contact">
       <div className="wrapper">
         <h2 className="text-4xl font-bold text-center mb-10">Contact Me</h2>
 
