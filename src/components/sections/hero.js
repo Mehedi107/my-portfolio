@@ -11,7 +11,7 @@ export default function HeroSection() {
         {/* Left: Text Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
           <h1 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight">
-            Hi, I'm <AuroraText>Mehedi</AuroraText> 👋
+            I'm <AuroraText>Mehedi</AuroraText> 👋
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">
             I’m a passionate front-end developer specializing in building
