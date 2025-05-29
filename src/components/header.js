@@ -28,11 +28,11 @@ export default function Header() {
 
   return (
     <header
-      className={`navbar fixed top-0 left-0 z-50 w-full h-16 transition duration-300 -translate-y-[72px] backdrop-blur-sm border-b border-1 border-dashed  ${
+      className={`navbar fixed top-0 left-0 z-50 w-full h-16 transition duration-300 -translate-y-[72px] backdrop-blur-sm border-b-1 ${
         isVisible ? 'visible' : ''
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 md:px-10 flex items-center justify-between h-16 border-x-1 border-dashed">
+      <div className="max-w-6xl mx-auto px-4 md:px-10 flex items-center justify-between h-16">
         {/* Desktop Logo */}
         <Link id="logo" href="/" className="text-xl font-bold hidden md:block">
           Logo
