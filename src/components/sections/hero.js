@@ -14,9 +14,18 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
             Hi! I'm <AuroraText>Mehedi</AuroraText> 👋
           </h1>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+          {/* <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             I’m a passionate front-end developer specializing in building
             beautiful, accessible, and fast web applications.
+          </p> */}
+          <p className="text-muted-foreground text-lg leading-relaxed  max-w-3xl">
+            I’m a Frontend Developer with a passion for building sleek,
+            responsive web applications using
+            <span className="font-medium text-foreground"> React</span>,
+            <span className="font-medium text-foreground"> Next.js</span>, and
+            <span className="font-medium text-foreground"> Tailwind CSS</span>.
+            I focus on clean UI, accessibility, and performance. Beyond the
+            code, I love solving problems and learning new things every day.
           </p>
           {/* Buttons */}
           <div className="flex flex-row items-center gap-4 justify-center lg:justify-start mt-10">

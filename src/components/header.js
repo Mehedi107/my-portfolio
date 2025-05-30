@@ -4,6 +4,7 @@ import MobileMenu from './mobile-menu';
 import NavLink from './nav-link';
 import { ThemeToggle } from './theme-toggle';
 import { useEffect, useReducer, useState } from 'react';
+import { ShinyButton } from './magicui/shiny-button';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -56,7 +57,12 @@ export default function Header() {
         </nav>
 
         {/* Theme Toggler Button */}
-        <ThemeToggle />
+        <div className="space-x-4 flex justify-end items-center">
+          <ShinyButton className="hidden lg:block">
+            Downlowad Resume
+          </ShinyButton>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

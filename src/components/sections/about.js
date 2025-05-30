@@ -12,7 +12,7 @@ export default function AboutSection() {
       <div className="wrapper flex flex-col md:flex-row items-center">
         {/* left content */}
         <div className="w-full md:w-1/2">
-          <h2 className={buttonVariants({ variant: 'outline' })}>About</h2>
+          <h2>About</h2>
 
           <p className="text-muted-foreground text-lg leading-relaxed  max-w-3xl">
             I’m a Frontend Developer with a passion for building sleek,
