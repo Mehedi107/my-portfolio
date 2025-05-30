@@ -18,7 +18,7 @@ export default function MobileMenu() {
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="bottom" className="p-6 h-3/4">
+      <SheetContent side="left" className="p-6 h-3/4">
         <SheetHeader>
           <SheetTitle></SheetTitle>
         </SheetHeader>

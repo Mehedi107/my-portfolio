@@ -1,6 +1,6 @@
-"use client";;
-import { AnimatePresence, motion, useMotionTemplate } from "motion/react";
-import React, { useCallback, useMemo, useRef, useState } from "react";
+'use client';
+import { AnimatePresence, motion, useMotionTemplate } from 'motion/react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 
 export function Lens({
   children,
@@ -10,14 +10,14 @@ export function Lens({
   position = { x: 0, y: 0 },
   defaultPosition,
   duration = 0.1,
-  lensColor = "black",
-  ariaLabel = "Zoom Area"
+  lensColor = 'black',
+  ariaLabel = 'Zoom Area',
 }) {
   if (zoomFactor < 1) {
-    throw new Error("zoomFactor must be greater than 1");
+    throw new Error('zoomFactor must be greater than 1');
   }
   if (lensSize < 0) {
-    throw new Error("lensSize must be greater than 0");
+    throw new Error('lensSize must be greater than 0');
   }
 
   const [isHovering, setIsHovering] = useState(false);
@@ -30,7 +30,7 @@ export function Lens({
     return mousePosition;
   }, [isStatic, position, defaultPosition, isHovering, mousePosition]);
 
-  const handleMouseMove = useCallback((e) => {
+  const handleMouseMove = useCallback(e => {
     const rect = e.currentTarget.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
@@ -38,8 +38,8 @@ export function Lens({
     });
   }, []);
 
-  const handleKeyDown = useCallback((e) => {
-    if (e.key === "Escape") setIsHovering(false);
+  const handleKeyDown = useCallback(e => {
+    if (e.key === 'Escape') setIsHovering(false);
   }, []);
 
   const maskImage = useMotionTemplate`radial-gradient(circle ${
@@ -52,7 +52,7 @@ export function Lens({
     const { x, y } = currentPosition;
 
     return (
-      (<motion.div
+      <motion.div
         initial={{ opacity: 0, scale: 0.58 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
@@ -63,30 +63,33 @@ export function Lens({
           WebkitMaskImage: maskImage,
           transformOrigin: `${x}px ${y}px`,
           zIndex: 50,
-        }}>
+        }}
+      >
         <div
           className="absolute inset-0"
           style={{
             transform: `scale(${zoomFactor})`,
             transformOrigin: `${x}px ${y}px`,
-          }}>
+          }}
+        >
           {children}
         </div>
-      </motion.div>)
+      </motion.div>
     );
   }, [currentPosition, lensSize, lensColor, zoomFactor, children, duration]);
 
   return (
-    (<div
+    <div
       ref={containerRef}
-      className="relative z-20 overflow-hidden rounded-xl"
+      className="relative z-20 overflow-hidden rounded-md"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseMove={handleMouseMove}
       onKeyDown={handleKeyDown}
       role="region"
       aria-label={ariaLabel}
-      tabIndex={0}>
+      tabIndex={0}
+    >
       {children}
       {isStatic || defaultPosition ? (
         LensContent
@@ -95,6 +98,6 @@ export function Lens({
           {isHovering && LensContent}
         </AnimatePresence>
       )}
-    </div>)
+    </div>
   );
 }

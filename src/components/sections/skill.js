@@ -15,6 +15,7 @@ import { Button } from '../ui/button';
 import { ShinyButton } from '../magicui/shiny-button';
 import { RainbowButton } from '../magicui/rainbow-button';
 import { ShineBorder } from '../magicui/shine-border';
+import Image from 'next/image';
 
 export default function SkillSection() {
   const { theme } = useTheme();
@@ -24,9 +25,7 @@ export default function SkillSection() {
   return (
     <section id="skills">
       <div className="wrapper">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Technology Stack
-        </h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Tech Stack</h2>
 
         <div className="space-y-5">
           {skillsData.map(({ skills, category, id }) => (
@@ -38,7 +37,14 @@ export default function SkillSection() {
               <CardContent>
                 <ul className="flex gap-3 flex-wrap">
                   {skills.map(skill => (
-                    <ShinyButton key={skill.id}>{skill.name}</ShinyButton>
+                    <Button key={skill.id} variant={'secondary'}>
+                      <Image
+                        src={`/icon/${skill.imgPath}`}
+                        width={15}
+                        height={15}
+                      />
+                      <span>{skill.name}</span>
+                    </Button>
                   ))}
                 </ul>
               </CardContent>
