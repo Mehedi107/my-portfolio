@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         {/* <Preloader /> */}
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Background />
+          {/* <Background /> */}
           <div className="pt-16 m-0">
             <Header />
           </div>
