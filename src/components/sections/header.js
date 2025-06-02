@@ -5,6 +5,7 @@ import { useEffect, useReducer, useState } from 'react';
 import MobileMenu from '../mobile-menu';
 import NavLink from '../nav-link';
 import SocialLinks from '../social-links';
+import Logo from '../logo';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -37,13 +38,7 @@ export default function Header() {
         {/* Start */}
         <div>
           {/* Desktop Logo */}
-          <Link
-            id="logo"
-            href="/"
-            className="text-xl font-bold hidden md:block"
-          >
-            Logo
-          </Link>
+          <Logo />
 
           {/* Mobile Nav */}
           <MobileMenu />

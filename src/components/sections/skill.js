@@ -25,7 +25,8 @@ export default function SkillSection() {
                   {skills.map(skill => (
                     <Button key={skill.id} variant={'secondary'}>
                       <Image
-                        src={`/icon/${skill.imgPath}`}
+                        src={`/icon/${skill.img.src}`}
+                        alt={skill.img.alt}
                         width={15}
                         height={15}
                       />
