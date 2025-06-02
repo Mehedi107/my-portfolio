@@ -2,12 +2,14 @@ import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import NavLink from './nav-link';
+import SocialLinks from './social-links';
 
 export default function MobileMenu() {
   return (
@@ -18,7 +20,7 @@ export default function MobileMenu() {
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="left" className="p-6 h-3/4">
+      <SheetContent side="left" className="p-6">
         <SheetHeader>
           <SheetTitle></SheetTitle>
         </SheetHeader>
@@ -31,6 +33,9 @@ export default function MobileMenu() {
             <NavLink href="#">Contact</NavLink>
           </nav>
         </div>
+        <SheetFooter className={'flex items-center'}>
+          <SocialLinks />
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   );

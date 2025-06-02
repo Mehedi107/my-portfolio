@@ -5,7 +5,7 @@ import Preloader from '@/components/preloader';
 import { Footer } from '@/components/sections/footer';
 import { ScrollProgress } from '@/components/magicui/scroll-progress';
 import { Background } from '@/components/backgroud';
-import Header from '@/components/header';
+import Header from '@/components/sections/header';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
