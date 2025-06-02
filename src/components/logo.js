@@ -14,13 +14,11 @@ export default function Logo() {
   const isDark = theme === 'dark';
 
   return (
-    <Link id="logo" href="/" className="text-xl font-bold hidden md:block">
-      <Image
-        src={isDark ? 'logo-light.svg' : 'logo-dark.svg'}
-        alt="logo"
-        width={30}
-        height={30}
-      />
-    </Link>
+    <Image
+      src={isDark ? 'logo-light.svg' : 'logo-dark.svg'}
+      alt="logo"
+      width={30}
+      height={30}
+    />
   );
 }

@@ -37,25 +37,17 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 md:px-10 flex items-center justify-between h-16">
         {/* Start */}
         <div>
-          {/* Desktop Logo */}
-          <Logo />
-
-          {/* Mobile Nav */}
+          <Link href="#hero" className="hidden md:block">
+            <Logo />
+          </Link>
           <MobileMenu />
         </div>
 
         {/* Center */}
         <div>
-          {/* Mobile logo */}
-          <Link
-            id="logo"
-            href="/"
-            className="text-xl font-bold block md:hidden"
-          >
-            Logo
+          <Link href="#hero" className="md:hidden">
+            <Logo />
           </Link>
-
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             <NavLink href="/#hero">Home</NavLink>
             <NavLink href="#about">About</NavLink>
