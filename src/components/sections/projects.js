@@ -19,9 +19,9 @@ export default function ProjectSection() {
     <section id="projects">
       <div className="wrapper">
         <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 justify-center">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {projects.map(project => (
-            <Card key={project.id} className="relative max-w-md shadow-none">
+            <Card key={project.id} className="relative sm:max-w-md shadow-none">
               <CardHeader>
                 <Lens
                   zoomFactor={2}

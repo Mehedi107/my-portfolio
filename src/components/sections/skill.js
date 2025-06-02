@@ -13,9 +13,9 @@ export default function SkillSection() {
       <div className="wrapper">
         <h2 className="text-4xl font-bold text-center mb-12">Tech Stack</h2>
 
-        <div className="space-y-5 flex gap-5 ">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {skillsData.map(({ skills, category, id }) => (
-            <Card key={id} className="relative w-1/3">
+            <Card key={id} className="relative sm:max-w-md">
               <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} />
               <CardHeader>
                 <CardTitle>{category}</CardTitle>
