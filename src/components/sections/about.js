@@ -3,7 +3,6 @@
 import { Button, buttonVariants } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
-import { Globe } from '../magicui/globe';
 import { ConfettiButton } from '../magicui/confetti';
 
 export default function AboutSection() {
