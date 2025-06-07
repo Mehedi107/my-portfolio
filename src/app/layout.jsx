@@ -1,11 +1,12 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import Preloader from '@/components/preloader';
 import { Footer } from '@/components/sections/footer';
-import { ScrollProgress } from '@/components/magicui/scroll-progress';
-import { Background } from '@/components/backgroud';
-import Header from '@/components/sections/header';
+import { NavigationBar } from '@/components/custom/navbar';
+// import { cn } from '@/lib/utils';
+// import Preloader from '@/components/custom/preloader';
+// import { ScrollProgress } from '@/components/magicui/scroll-progress';
+// import { Background } from '@/components/custom/backgroud';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -31,11 +32,8 @@ export default function RootLayout({ children }) {
         {/* <Preloader /> */}
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {/* <Background /> */}
-          <div className="pt-16 m-0">
-            <Header />
-          </div>
-          <ScrollProgress />
+          {/* <ScrollProgress /> */}
+          <NavigationBar />
           <main>{children}</main>
           <Footer />
         </ThemeProvider>

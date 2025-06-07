@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { ShineBorder } from '../magicui/shine-border';
 import { AuroraText } from '../magicui/aurora-text';
 import Link from 'next/link';
-import AnimatePing from '../animate-ping';
+import AnimatePing from '../custom/animate-ping';
+import { ThemeToggleButton } from '../custom/theme-toggle-button';
 
 export default function HeroSection() {
   return (
