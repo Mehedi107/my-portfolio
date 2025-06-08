@@ -1,46 +1,18 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import Earth from '@/components/ui/globe';
-import { SparklesCore } from '@/components/ui/sparkles';
 import { Label } from '@/components/ui/label';
-import { Check, Loader2 } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { SparklesCore } from '../ui/sparkles';
 
 export default function ContactSection() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
   const formRef = useRef(null);
   const isInView = useInView(formRef, { once: true, amount: 0.3 });
-
-  const handleSubmit = async e => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      console.log('Form submitted:', { name, email, message });
-      // await new Promise(resolve => setTimeout(resolve, 1000));
-      // setName('');
-      // setEmail('');
-      // setMessage('');
-      // setIsSubmitted(true);
-      // setTimeout(() => {
-      //   setIsSubmitted(false);
-      // }, 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const { theme } = useTheme();
   const particleColor = theme === 'dark' ? '#fafafa' : '#0a0a0a';
@@ -61,7 +33,7 @@ export default function ContactSection() {
       />
 
       <div className="wrapper relative z-10 mx-auto px-4 md:px-6">
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-[28px] border bg-secondary/20  backdrop-blur-sm">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border bg-secondary/20  backdrop-blur-sm">
           <div className="grid md:grid-cols-2">
             <div className="relative p-6 md:p-10" ref={formRef}>
               <motion.div
@@ -105,9 +77,6 @@ export default function ContactSection() {
                   >
                     <Label htmlFor="name">Name</Label>
                     <Input
-                      // id="name"
-                      // value={name}
-                      // onChange={e => setName(e.target.value)}
                       type="text"
                       name="name"
                       placeholder="Enter your name"
@@ -123,10 +92,7 @@ export default function ContactSection() {
                   >
                     <Label htmlFor="email">Email</Label>
                     <Input
-                      // id="email"
                       type="email"
-                      // value={email}
-                      // onChange={e => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
                       name="email"
@@ -142,9 +108,6 @@ export default function ContactSection() {
                 >
                   <Label htmlFor="message">Message</Label>
                   <Textarea
-                    // id="message"
-                    // value={message}
-                    // onChange={e => setMessage(e.target.value)}
                     placeholder="Enter your message"
                     name="message"
                     required
@@ -157,24 +120,8 @@ export default function ContactSection() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full"
                 >
-                  <Button
-                    type="submit"
-                    // disabled={isSubmitting}
-                    className="w-full"
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center justify-center">
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Sending...
-                      </span>
-                    ) : isSubmitted ? (
-                      <span className="flex items-center justify-center">
-                        <Check className="mr-2 h-4 w-4" />
-                        Message Sent!
-                      </span>
-                    ) : (
-                      <span>Send Message</span>
-                    )}
+                  <Button type="submit" className="w-full">
+                    Send Message
                   </Button>
                 </motion.div>
                 {/* Optional Hidden Fields */}
@@ -196,7 +143,7 @@ export default function ContactSection() {
               className="relative flex items-center justify-center overflow-hidden p-6 md:p-10"
             >
               <div className="flex flex-col items-center justify-center overflow-hidden">
-                <article className="relative mx-auto h-[350px] min-h-60 max-w-[445px] overflow-hidden rounded-xl border p-6 text-3xl tracking-tight md:h-[450px] md:min-h-80 md:p-8 md:text-4xl md:leading-[1.05] lg:text-5xl text-primary">
+                <article className="relative mx-auto h-[350px] min-h-60 max-w-[445px] overflow-hidden rounded-lg border p-6 text-3xl tracking-tight md:h-[450px] md:min-h-80 md:p-8 md:text-4xl md:leading-[1.05] lg:text-5xl text-primary">
                   Presenting you with the best UI possible.
                   <div className="absolute -bottom-20 -right-20 z-10 mx-auto flex h-full w-full max-w-[300px] items-center justify-center transition-all duration-700 hover:scale-105 md:-bottom-28 md:-right-28 md:max-w-[550px]">
                     <Earth

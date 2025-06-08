@@ -13,12 +13,15 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import { Github, Globe } from 'lucide-react';
 import { Lens } from '../magicui/lens';
+import { SparklesText } from '../magicui/sparkles-text';
 
 export default function ProjectSection() {
   return (
     <section id="projects">
       <div className="wrapper">
-        <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+        <h2 className="text-center mb-12">
+          <SparklesText>Projects</SparklesText>
+        </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {projects.map(project => (
             <Card key={project.id} className="relative sm:max-w-md shadow-none">
@@ -45,7 +48,7 @@ export default function ProjectSection() {
                   See our latest and best camp destinations all across the five
                   continents of the globe.
                 </CardDescription>
-                <div className="flex flex-wrap gap-3 mt-4">
+                <div className="flex flex-wrap gap-2 mt-4">
                   {project.techStack.map(tech => (
                     <Badge key={tech} variant="outline">
                       {tech}

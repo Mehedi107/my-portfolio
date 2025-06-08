@@ -4,15 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import { ShineBorder } from '../magicui/shine-border';
 import Image from 'next/image';
-import { AnimatedShinyText } from '../magicui/animated-shiny-text';
 import { SparklesText } from '../magicui/sparkles-text';
 
 export default function SkillSection() {
   return (
     <section id="skills">
       <div className="wrapper">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          {/* <AnimatedShinyText>Tech Stack</AnimatedShinyText> */}
+        <h2 className="text-center mb-12">
           <SparklesText>Tech Stack</SparklesText>
         </h2>
 
@@ -23,9 +21,7 @@ export default function SkillSection() {
               <CardHeader>
                 <CardTitle>
                   {' '}
-                  <AnimatedShinyText className="">
-                    <span>{category}</span>
-                  </AnimatedShinyText>
+                  <span>{category}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-1">

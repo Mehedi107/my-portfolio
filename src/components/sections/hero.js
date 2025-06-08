@@ -4,7 +4,6 @@ import { ShineBorder } from '../magicui/shine-border';
 import { AuroraText } from '../magicui/aurora-text';
 import Link from 'next/link';
 import AnimatePing from '../custom/animate-ping';
-import { ThemeToggleButton } from '../custom/theme-toggle-button';
 
 export default function HeroSection() {
   return (
@@ -12,14 +11,11 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10 min-h-[calc(100vh-70px)] py-10 sm:py-20">
         {/* Left: Text Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
             Hi! I'm <AuroraText>Mehedi</AuroraText> 👋
           </h1>
-          {/* <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            I’m a passionate front-end developer specializing in building
-            beautiful, accessible, and fast web applications.
-          </p> */}
-          <p className="text-muted-foreground text-lg leading-relaxed  max-w-3xl">
+
+          <p className="text-muted-foreground leading-relaxed max-w-3xl">
             I’m a Frontend Developer with a passion for building sleek,
             responsive web applications using
             <span className="font-medium text-foreground"> React</span>,
@@ -31,7 +27,7 @@ export default function HeroSection() {
           {/* Buttons */}
           <div className="flex flex-row items-center gap-4 justify-center lg:justify-start mt-10">
             <Button size="lg" asChild>
-              <Link href="#contact">See Projects</Link>
+              <Link href="#projects">See Projects</Link>
             </Button>
             <Button size="lg" variant={'outline'}>
               <AnimatePing />

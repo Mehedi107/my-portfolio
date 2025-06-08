@@ -74,7 +74,7 @@ export const SparklesText = ({
 
   return (
     <div
-      className={cn('text-4xl font-bold', className)}
+      className={cn('text-3xl md:text-4xl font-bold', className)}
       {...props}
       style={{
         '--sparkles-first-color': `${colors.first}`,
