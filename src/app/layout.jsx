@@ -26,9 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
-      >
+      <body className={`${geistSans.className} antialiased relative`}>
         {/* <Preloader /> */}
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

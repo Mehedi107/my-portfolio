@@ -18,7 +18,10 @@ export default function ContactSection() {
   const particleColor = theme === 'dark' ? '#fafafa' : '#0a0a0a';
 
   return (
-    <section className="relative w-full overflow-hidden bg-background py-16 md:py-24">
+    <section
+      id="contact"
+      className="relative w-full overflow-hidden bg-background py-16 md:py-20"
+    >
       <div
         className="absolute left-10 top-10 h-[300px] w-[300px] rounded-full opacity-10 blur-[100px]"
         style={{
