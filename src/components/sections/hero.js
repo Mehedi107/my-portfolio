@@ -49,10 +49,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-    // <section className="w-full  px-6 text-center lg:text-left bg-background">
-    //   <div className="max-w-6xl mx-auto h-full border-x-1 border-dashed">
-
-    //   </div>
-    // </section>
   );
 }

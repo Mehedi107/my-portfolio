@@ -23,15 +23,15 @@ export default function ContactSection() {
       className="relative w-full overflow-hidden bg-background py-16 md:py-20"
     >
       <div
-        className="absolute left-10 top-10 h-[300px] w-[300px] rounded-full opacity-10 blur-[100px]"
+        className="absolute left-20 top-20 h-[250px] w-[250px] rounded-full opacity-10 blur-[100px]"
         style={{
-          background: `radial-gradient(circle at center, var(--color-4), transparent 70%)`,
+          background: `radial-gradient(circle at center, var(--accent-foreground), transparent 70%)`,
         }}
       />
       <div
-        className="absolute bottom-0 right-0 h-[300px] w-[300px] rounded-full opacity-10 blur-[100px]"
+        className="absolute bottom-20 right-20 h-[250px] w-[250px] rounded-full opacity-10 blur-[100px]"
         style={{
-          background: `radial-gradient(circle at center, var(--color-4), transparent 70%)`,
+          background: `radial-gradient(circle at center, var(--accent-foreground), transparent 70%)`,
         }}
       />
 

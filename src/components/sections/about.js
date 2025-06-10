@@ -49,11 +49,17 @@ export default function AboutSection() {
         {/* right content */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <Image
-            width={350}
-            height={350}
+            width={300}
+            height={300}
             src="/about2.svg"
             alt="a laptop with coffee mug"
           />
+          {/* <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ repeat: Infinity, duration: 3 }}
+          >
+            <Image width={350} height={350} src="/about2.svg" alt="About Me" />
+          </motion.div> */}
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@
     "**/node_modules": true
   },
   "files.watcherExclude": {
-    // "**/.next/**": true,
+    "**/.next/**": true,
     "**/node_modules/**": true
   }
 }
