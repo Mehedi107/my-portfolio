@@ -11,17 +11,27 @@ import Image from 'next/image';
 import { Badge } from '../ui/badge';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { Github, Globe } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Lens } from '../magicui/lens';
-import { SparklesText } from '../magicui/sparkles-text';
+import { FaGithub } from 'react-icons/fa';
 
 export default function ProjectSection() {
   return (
     <section id="projects">
-      <div className="wrapper">
-        <h2 className="text-center mb-12">
-          <SparklesText>Projects</SparklesText>
-        </h2>
+      <div className="wrapper ">
+        {/* title content */}
+        <div className="space-y-4 mb-10">
+          <Badge className="rounded-full" variant="secondary">
+            Projects
+          </Badge>
+
+          <h2 className="text-4xl md:text-5xl font-bold">Featured Work</h2>
+
+          <p className="text-muted-foreground">
+            Showcasing some of my best projects and technical achievements
+          </p>
+        </div>
+        {/* Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {projects.map(project => (
             <Card key={project.id} className="relative sm:max-w-md shadow-none">
@@ -50,25 +60,29 @@ export default function ProjectSection() {
                 </CardDescription>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.techStack.map(tech => (
-                    <Badge key={tech} variant="outline">
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="rounded-full"
+                    >
                       {tech}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="space-x-4 flex justify-between items-center">
-                <Button asChild>
+                <Button asChild className="rounded-full">
                   <Link
                     href="https://tailwindcss.com/docs/animation"
                     target="blank"
                   >
-                    <Globe /> Website
+                    <ExternalLink /> Live Demo
                   </Link>
                 </Button>
 
-                <Button asChild>
+                <Button asChild className="rounded-full" variant="outline">
                   <Link href="https://github.com/Mehedi107" target="blank">
-                    <Github /> Repo
+                    <FaGithub /> View Code
                   </Link>
                 </Button>
               </CardFooter>

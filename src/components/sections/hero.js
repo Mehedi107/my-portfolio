@@ -15,21 +15,19 @@ export default function HeroSection() {
             Hi! I'm <AuroraText>Mehedi</AuroraText> 👋
           </h1>
 
-          <p className="text-muted-foreground leading-relaxed max-w-3xl">
-            I’m a Frontend Developer with a passion for building sleek,
-            responsive web applications using
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+            Building sleek, responsive web applications with
             <span className="font-medium text-foreground"> React</span>,
             <span className="font-medium text-foreground"> Next.js</span>, and
             <span className="font-medium text-foreground"> Tailwind CSS</span>.
-            I focus on clean UI, accessibility, and performance. Beyond the
-            code, I love solving problems and learning new things every day.
+            I focus on clean UI, accessibility, and performance.
           </p>
           {/* Buttons */}
           <div className="flex flex-row items-center gap-4 justify-center lg:justify-start mt-10">
-            <Button size="lg" asChild>
+            <Button size="xl" asChild className="rounded-full">
               <Link href="#projects">See Projects</Link>
             </Button>
-            <Button size="lg" variant={'outline'}>
+            <Button size="xl" variant={'outline'} className="rounded-full">
               <AnimatePing />
               Hire Me
             </Button>

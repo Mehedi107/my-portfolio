@@ -2,22 +2,30 @@
 import { skillsData } from '@/data/data';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
-import { ShineBorder } from '../magicui/shine-border';
 import Image from 'next/image';
-import { SparklesText } from '../magicui/sparkles-text';
+import { Badge } from '../ui/badge';
 
 export default function SkillSection() {
   return (
     <section id="skills">
       <div className="wrapper">
-        <h2 className="text-center mb-12">
-          <SparklesText>Tech Stack</SparklesText>
-        </h2>
+        {/* title content */}
+        <div className="space-y-4 mb-10">
+          <Badge className="rounded-full" variant="secondary">
+            Skills
+          </Badge>
+
+          <h2 className="text-4xl md:text-5xl font-bold">My Expertise</h2>
+
+          <p className="text-muted-foreground">
+            A comprehensive overview of the technologies and tools I master,
+            driving my passion for web development.
+          </p>
+        </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {skillsData.map(({ skills, category, id }) => (
             <Card key={id} className="relative sm:max-w-md">
-              {/* <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} /> */}
               <CardHeader>
                 <CardTitle>
                   {' '}

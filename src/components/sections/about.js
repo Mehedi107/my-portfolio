@@ -1,29 +1,30 @@
 'use client';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
-import { Download, Github } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { ConfettiButton } from '../magicui/confetti';
 import { Badge } from '../ui/badge';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="wrapper flex flex-col md:flex-row items-center">
+      <div className="wrapper flex flex-col md:flex-row items-center gap-5">
         {/* left content */}
-        <div className="w-full md:w-1/2 space-y-4">
+        <div className="w-full md:w-1/2 space-y-5">
           <h2>
             <Badge className="rounded-full" variant="secondary">
               About
             </Badge>
           </h2>
 
-          <h3 className="font-bold text-4xl md:5xl">
+          <h3 className="font-bold text-3xl md:5xl">
             Passionate about creating impactful web experiences
           </h3>
 
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+          <p className="text-muted-foreground leading-relaxed max-w-3xl">
             I’m a Frontend Developer with a passion for building sleek,
             responsive web applications using
             <span className="font-medium text-foreground"> React</span>,
@@ -40,14 +41,19 @@ export default function AboutSection() {
             </Button>
             <ConfettiButton className="rounded-full" variant="outline" asChild>
               <Link href="https://drive.google.com/uc?export=download&id=14q4w1IBRXpYODygmm006Vwmw6_-UfmcE">
-                <Download /> Download Resume
+                <Download /> Download CV
               </Link>
             </ConfettiButton>
           </div>
         </div>
         {/* right content */}
-        <div className="w-full md:w-1/2">
-          {/* <Globe className="relative" /> */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <Image
+            width={350}
+            height={350}
+            src="/about2.svg"
+            alt="a laptop with coffee mug"
+          />
         </div>
       </div>
     </section>
