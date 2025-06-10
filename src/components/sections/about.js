@@ -11,14 +11,14 @@ import Image from 'next/image';
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="wrapper flex flex-col md:flex-row items-center gap-20 md:gap-5">
+      <div className="wrapper flex flex-col md:flex-row items-center gap-20 md:gap-6">
         {/* left content */}
-        <div className="w-full md:w-1/2 space-y-5">
+        <div className="w-full md:w-2/3 space-y-5">
           <h2>
             <Badge variant="secondary">About</Badge>
           </h2>
 
-          <h3 className="font-bold text-3xl md:5xl">
+          <h3 className="font-bold text-4xl md:text-5xl">
             Passionate about creating impactful web experiences
           </h3>
 
@@ -31,7 +31,7 @@ export default function AboutSection() {
             I focus on clean UI, accessibility, and performance. Beyond the
             code, I love solving problems and learning new things every day.
           </p>
-          <div className="relative space-x-4">
+          <div className="relative space-x-4 space-y-4 ">
             <Button asChild>
               <Link href="https://github.com/Mehedi107">
                 <FaGithub /> View Github
@@ -45,7 +45,7 @@ export default function AboutSection() {
           </div>
         </div>
         {/* right content */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
           <Image
             width={300}
             height={300}

@@ -66,7 +66,7 @@ export const NavBody = ({ children, className, visible }) => {
         minWidth: '800px',
       }}
       className={cn(
-        'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-md bg-transparent px-4 py-2 lg:flex dark:bg-transparent border',
+        'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent border',
         visible && 'bg-white/10 dark:bg-neutral-950/10',
         className
       )}
@@ -119,7 +119,7 @@ export const MobileNav = ({ children, className, visible }) => {
         width: visible ? '90%' : '100%',
         paddingRight: visible ? '12px' : '0px',
         paddingLeft: visible ? '12px' : '0px',
-        borderRadius: visible ? '0.25rem' : '0',
+        borderRadius: visible ? '2rem' : '0',
         y: visible ? 10 : 0,
       }}
       transition={{

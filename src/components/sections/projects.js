@@ -18,7 +18,7 @@ import { FaGithub } from 'react-icons/fa';
 export default function ProjectSection() {
   return (
     <section id="projects">
-      <div className="wrapper ">
+      <div className="wrapper">
         {/* title content */}
         <div className="space-y-4 mb-10">
           <Badge variant="secondary">Projects</Badge>
@@ -32,7 +32,7 @@ export default function ProjectSection() {
         {/* Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {projects.map(project => (
-            <Card key={project.id} className="relative sm:max-w-md shadow-none">
+            <Card key={project.id} className=" max-w-md shadow-none">
               <CardHeader>
                 <Lens
                   zoomFactor={2}
