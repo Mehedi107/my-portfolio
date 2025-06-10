@@ -66,7 +66,7 @@ export const NavBody = ({ children, className, visible }) => {
         minWidth: '800px',
       }}
       className={cn(
-        'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent border',
+        'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-md bg-transparent px-4 py-2 lg:flex dark:bg-transparent border',
         visible && 'bg-white/10 dark:bg-neutral-950/10',
         className
       )}
@@ -119,7 +119,7 @@ export const MobileNav = ({ children, className, visible }) => {
         width: visible ? '90%' : '100%',
         paddingRight: visible ? '12px' : '0px',
         paddingLeft: visible ? '12px' : '0px',
-        borderRadius: visible ? '40px' : '2rem',
+        borderRadius: visible ? '0.25rem' : '0',
         y: visible ? 10 : 0,
       }}
       transition={{
@@ -128,7 +128,7 @@ export const MobileNav = ({ children, className, visible }) => {
         damping: 50,
       }}
       className={cn(
-        'relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden',
+        'relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden rounded-md',
         visible && 'bg-white/80 dark:bg-neutral-950/80',
         className
       )}
@@ -160,7 +160,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            'absolute inset-x-0 top-16 z-50 flex w-full flex-col items-center justify-center gap-4 rounded-lg bg-background px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] border',
+            'absolute inset-x-0 top-16 z-50 flex w-full flex-col items-center justify-center gap-4 rounded-md bg-background px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] border',
             className
           )}
         >

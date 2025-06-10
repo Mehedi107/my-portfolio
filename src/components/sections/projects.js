@@ -21,9 +21,7 @@ export default function ProjectSection() {
       <div className="wrapper ">
         {/* title content */}
         <div className="space-y-4 mb-10">
-          <Badge className="rounded-full" variant="secondary">
-            Projects
-          </Badge>
+          <Badge variant="secondary">Projects</Badge>
 
           <h2 className="text-4xl md:text-5xl font-bold">Featured Work</h2>
 
@@ -71,7 +69,7 @@ export default function ProjectSection() {
                 </div>
               </CardContent>
               <CardFooter className="space-x-4 flex justify-between items-center">
-                <Button asChild className="rounded-full">
+                <Button asChild>
                   <Link
                     href="https://tailwindcss.com/docs/animation"
                     target="blank"
@@ -80,7 +78,7 @@ export default function ProjectSection() {
                   </Link>
                 </Button>
 
-                <Button asChild className="rounded-full" variant="outline">
+                <Button asChild variant="outline">
                   <Link href="https://github.com/Mehedi107" target="blank">
                     <FaGithub /> View Code
                   </Link>

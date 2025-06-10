@@ -11,9 +11,7 @@ export default function SkillSection() {
       <div className="wrapper">
         {/* title content */}
         <div className="space-y-4 mb-10">
-          <Badge className="rounded-full" variant="secondary">
-            Skills
-          </Badge>
+          <Badge variant="secondary">Skills</Badge>
 
           <h2 className="text-4xl md:text-5xl font-bold">My Expertise</h2>
 

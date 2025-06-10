@@ -24,10 +24,10 @@ export default function HeroSection() {
           </p>
           {/* Buttons */}
           <div className="flex flex-row items-center gap-4 justify-center lg:justify-start mt-10">
-            <Button size="xl" asChild className="rounded-full">
+            <Button size="xl" asChild>
               <Link href="#projects">See Projects</Link>
             </Button>
-            <Button size="xl" variant={'outline'} className="rounded-full">
+            <Button size="xl" variant={'outline'}>
               <AnimatePing />
               Hire Me
             </Button>
