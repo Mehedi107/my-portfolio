@@ -8,7 +8,7 @@ import {
   TabsProvider,
 } from '@/components/ui/image-tabs';
 import Link from 'next/link';
-import { projectsData } from '@/data/projects-data';
+import { projectsData } from '@/data/data';
 import { Button } from '../ui/button';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';

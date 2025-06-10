@@ -1,6 +1,5 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { Download } from 'lucide-react';
 import { ConfettiButton } from '../magicui/confetti';
@@ -49,7 +48,7 @@ export default function AboutSection() {
           <Image
             width={300}
             height={300}
-            src="/about2.svg"
+            src="/about.webp"
             alt="a laptop with coffee mug"
             priority={false}
             loading="lazy"

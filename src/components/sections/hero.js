@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { ShineBorder } from '../magicui/shine-border';
 import { AuroraText } from '../magicui/aurora-text';
 import Link from 'next/link';
 import AnimatePing from '../custom/animate-ping';
@@ -40,7 +39,6 @@ export default function HeroSection() {
         {/* Right: Profile Image */}
         <div className="flex-1 flex justify-center ">
           <div className="h-72 w-72 rounded-full border shadow-lg relative overflow-hidden">
-            <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} />
             <Image
               src="/avatar.png"
               alt="Your Name"
