@@ -11,7 +11,7 @@ import Image from 'next/image';
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="wrapper flex flex-col md:flex-row items-center gap-5">
+      <div className="wrapper flex flex-col md:flex-row items-center gap-20 md:gap-5">
         {/* left content */}
         <div className="w-full md:w-1/2 space-y-5">
           <h2>
@@ -54,12 +54,6 @@ export default function AboutSection() {
             src="/about2.svg"
             alt="a laptop with coffee mug"
           />
-          {/* <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 3 }}
-          >
-            <Image width={350} height={350} src="/about2.svg" alt="About Me" />
-          </motion.div> */}
         </div>
       </div>
     </section>
