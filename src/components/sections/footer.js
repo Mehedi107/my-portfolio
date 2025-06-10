@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SocialLinks from '../custom/social-links';
 
 export const Footer = () => {
