@@ -2,7 +2,7 @@ import { VelocityScroll } from '@/components/magicui/scroll-based-velocity';
 
 export function ScrollBasedVelocity() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-10">
       <VelocityScroll>
         User Friendly ✨ Secure ✨ Interactive ✨ Responsive ✨ Reliable ✨
         Performant ✨ Useable ✨ Maintainable ✨ Scalable ✨ Accessible ✨ SEO
