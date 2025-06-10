@@ -1,64 +1,63 @@
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Github, ExternalLink } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+  CardTitle,
+} from '../ui/card';
+import { FaGithub } from 'react-icons/fa';
+import { Lens } from './../magicui/lens';
 
-export const ProjectCard = ({
-  name,
-  image,
-  techStack,
-  description,
-  liveLink,
-  githubLink,
-  slug,
-}) => {
+export const ProjectCard = ({ content }) => {
+  const { id, img, title, technology, description, liveLink, githubLink } =
+    content;
   return (
-    <Card className="w-full max-w-md shadow-xl hover:scale-[1.01] transition-transform">
+    <Card key={id} className=" max-w-2xs shadow-none">
       <CardHeader>
-        <Image
-          src={image}
-          alt={name}
-          width={800}
-          height={400}
-          className="rounded-lg"
-        />
+        <Lens
+          zoomFactor={2}
+          lensSize={150}
+          isStatic={false}
+          ariaLabel="Zoom Area"
+        >
+          <Image
+            src={img.src}
+            alt={img.alt}
+            width={300}
+            height={200}
+            className="w-[300px] h-[200px] object-cover"
+          />
+        </Lens>
       </CardHeader>
       <CardContent>
-        <h3 className="text-xl font-semibold mb-2">{name}</h3>
-        <p className="text-muted-foreground mb-2">{description}</p>
-        <div className="flex flex-wrap gap-2">
-          {techStack.map((tech, idx) => (
-            <Badge key={idx} variant="secondary">
+        <CardTitle className="text-2xl mb-2">{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {technology.map(tech => (
+            <Badge key={tech} variant="outline" className="rounded-full">
               {tech}
             </Badge>
           ))}
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between flex-wrap gap-2">
-        <Link href={liveLink} target="_blank">
-          <Button variant="link" size="sm" className="flex gap-1">
-            <ExternalLink size={16} />
-            Live
-          </Button>
-        </Link>
-        <Link href={githubLink} target="_blank">
-          <Button variant="link" size="sm" className="flex gap-1">
-            <Github size={16} />
-            Code
-          </Button>
-        </Link>
-        <Link href={`/projects/${slug}`}>
-          <Button size="sm" className="ml-auto">
-            View More
-          </Button>
-        </Link>
+      <CardFooter className="space-x-4 flex justify-between items-center">
+        <Button asChild>
+          <Link href={liveLink} target="blank">
+            <ExternalLink /> Live Demo
+          </Link>
+        </Button>
+
+        <Button asChild variant="outline">
+          <Link href={githubLink} target="blank">
+            <FaGithub /> View Code
+          </Link>
+        </Button>
       </CardFooter>
     </Card>
   );

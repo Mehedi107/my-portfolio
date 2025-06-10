@@ -31,8 +31,8 @@ export default function HeroSection() {
               </Link>
             </Button>
             <Button size="xl" variant={'outline'}>
-              <AnimatePing />
               Hire Me
+              <AnimatePing />
             </Button>
           </div>
         </div>
