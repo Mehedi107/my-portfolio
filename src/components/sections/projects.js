@@ -1,22 +1,19 @@
 import ProjectsTab from '../custom/project-tabs';
-import { Badge } from '../ui/badge';
+import SectionHeader from '../custom/section-header';
+import SlideInFromBottom from '../custom/slide-in-from-bottom';
 
 export default function ProjectSection() {
   return (
     <section id="projects">
       <div className="wrapper">
-        {/* title content */}
-        <div className="space-y-4 mb-10">
-          <Badge variant="secondary">Projects</Badge>
-
-          <h2 className="text-4xl md:text-5xl font-bold">Featured Work</h2>
-
-          <p className="text-muted-foreground">
-            Showcasing some of my best projects and technical achievements
-          </p>
-        </div>
-        {/* content */}
-        <ProjectsTab />
+        <SectionHeader
+          section="Projects"
+          title="Featured Work"
+          description="Showcasing some of my best projects and technical achievements"
+        />
+        <SlideInFromBottom delay={0.6}>
+          <ProjectsTab />
+        </SlideInFromBottom>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import AnimatePing from '../custom/animate-ping';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Link from 'next/link';
 import { HiOutlineMail } from 'react-icons/hi';
+import SlideInFromBottom from '../custom/slide-in-from-bottom';
 
 const BannerSection = () => {
   return (
@@ -20,29 +21,40 @@ const BannerSection = () => {
         )}
       />
       <div className="relative z-10 text-center max-w-2xl">
-        <Badge>
-          <AnimatePing /> MERN Stack Developer
-        </Badge>
-        <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-          Hi! I Am Mehedi A Full Stack Web Developer
-        </h1>
-        <p className="mt-6 text-[17px] md:text-lg">
-          Building sleek, responsive web applications with React, Next.js, and
-          Tailwind CSS. I focus on clean UI, accessibility, and performance.
-        </p>
-        <div className="mt-12 flex items-center justify-center gap-4">
-          <Button size="lg" asChild>
-            <Link href="#projects">
-              See Projects <FiArrowDownCircle />
-            </Link>
-          </Button>
+        <SlideInFromBottom>
+          <Badge>
+            <AnimatePing /> MERN Stack Developer
+          </Badge>
+        </SlideInFromBottom>
 
-          <Link href="mailto:mehedi.hsn.dev@gmail.com" target="_blank">
-            <Button size="lg" variant={'outline'}>
-              Hire Me <HiOutlineMail />
+        <SlideInFromBottom delay={0.4}>
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
+            Hi! I Am Mehedi A Full Stack Web Developer
+          </h1>
+        </SlideInFromBottom>
+
+        <SlideInFromBottom delay={0.5}>
+          <p className="mt-6 text-[17px] md:text-lg">
+            Building sleek, responsive web applications with React, Next.js, and
+            Tailwind CSS. I focus on clean UI, accessibility, and performance.
+          </p>
+        </SlideInFromBottom>
+
+        <SlideInFromBottom delay={0.6}>
+          <div className="mt-12 flex items-center justify-center gap-4">
+            <Button size="lg" asChild>
+              <Link href="#projects">
+                See Projects <FiArrowDownCircle />
+              </Link>
             </Button>
-          </Link>
-        </div>
+
+            <Link href="mailto:mehedi.hsn.dev@gmail.com" target="_blank">
+              <Button size="lg" variant={'outline'}>
+                Hire Me <HiOutlineMail />
+              </Button>
+            </Link>
+          </div>
+        </SlideInFromBottom>
       </div>
     </section>
   );

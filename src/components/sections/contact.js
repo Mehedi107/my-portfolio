@@ -5,7 +5,6 @@ import { motion, useInView } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import Earth from '@/components/ui/globe';
 import { Label } from '@/components/ui/label';
 import { useTheme } from 'next-themes';
 import { SparklesCore } from '../ui/sparkles';
@@ -147,7 +146,7 @@ export default function ContactSection() {
               className="relative overflow-hidden min-h-96 w-full flex items-center"
             >
               <Image
-                src="/contact2.png"
+                src="/contact.webp"
                 alt="abstract chrome design"
                 fill
                 className="absolute top-0 object-cover right-0 bottom-0 left-0 -z-1 dark:opacity-50 opacity-80"
