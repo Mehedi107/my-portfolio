@@ -8,7 +8,7 @@ import { FiArrowDownCircle } from 'react-icons/fi';
 export default function HeroSection() {
   return (
     <section id="hero">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10 min-h-[calc(100vh-70px)] py-10 sm:py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10 min-h-dvh py-10 sm:py-20">
         {/* Left: Text Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
           <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight">

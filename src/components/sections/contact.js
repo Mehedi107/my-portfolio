@@ -21,7 +21,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-background py-16 md:py-20"
+      className="relative w-full overflow-hidden bg-background py-16 sm:py-20"
     >
       <div
         className="absolute left-20 top-20 h-[250px] w-[250px] rounded-full opacity-10 blur-[100px]"
@@ -150,7 +150,7 @@ export default function ContactSection() {
                 src="/contact2.png"
                 alt="abstract chrome design"
                 fill
-                className="absolute top-0 object-cover right-0 bottom-0 left-0 -z-1 dark:opacity-50"
+                className="absolute top-0 object-cover right-0 bottom-0 left-0 -z-1 dark:opacity-50 opacity-80"
               />
               <p className="dark:bg-background/60 bg-background/80 p-5 text-center text-lg w-full">
                 Any Design In Mind? Let's Discuss
