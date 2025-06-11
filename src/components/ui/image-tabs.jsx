@@ -63,7 +63,7 @@ export function TabDes({ children, value }) {
             delay: 0.14,
           }}
         >
-          <div className={`p-5 space-y-5`}>{children}</div>
+          <div className={`p-5 pb-0 space-y-4`}>{children}</div>
         </motion.div>
       )}
     </AnimatePresence>

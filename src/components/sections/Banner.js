@@ -2,11 +2,10 @@ import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { ArrowUpRight, CirclePlay } from 'lucide-react';
 import AnimatePing from '../custom/animate-ping';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import Link from 'next/link';
-import { FaBolt } from 'react-icons/fa6';
+import { HiOutlineMail } from 'react-icons/hi';
 
 const BannerSection = () => {
   return (
@@ -40,7 +39,7 @@ const BannerSection = () => {
 
           <Link href="mailto:mehedi.hsn.dev@gmail.com" target="_blank">
             <Button size="lg" variant={'outline'}>
-              Hire Me
+              Hire Me <HiOutlineMail />
             </Button>
           </Link>
         </div>

@@ -35,7 +35,7 @@ export default function ContactSection() {
         }}
       />
 
-      <div className="wrapper relative z-10 mx-auto px-4 md:px-6">
+      <div className="relative z-10 mx-auto px-4 md:px-6 max-w-5xl">
         <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border bg-secondary/20  backdrop-blur-sm">
           <div className="grid md:grid-cols-2">
             <div className="relative p-6 md:p-10" ref={formRef}>

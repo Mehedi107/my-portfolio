@@ -1,10 +1,9 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { Footer } from '@/components/sections/footer';
 import { NavigationBar } from '@/components/custom/navbar';
 import Preloader from '@/components/custom/preloader';
-import { ScrollProgress } from '@/components/magicui/scroll-progress';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
         <Preloader />
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ScrollProgress />
           <NavigationBar />
           <main>{children}</main>
           <Footer />

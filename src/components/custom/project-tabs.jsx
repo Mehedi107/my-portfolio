@@ -40,7 +40,7 @@ function ProjectsTab() {
               <TabHeader value={content.id}>{content.title}</TabHeader>
               <TabDes value={content.id}>
                 <p className="text-muted-foreground">{content.description}</p>
-                <div className="flex gap-3">
+                <div className="flex gap-2 flex-wrap">
                   {content.technology.map(tech => (
                     <Badge
                       key={tech}
