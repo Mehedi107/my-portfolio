@@ -9,6 +9,7 @@ import Earth from '@/components/ui/globe';
 import { Label } from '@/components/ui/label';
 import { useTheme } from 'next-themes';
 import { SparklesCore } from '../ui/sparkles';
+import Image from 'next/image';
 
 export default function ContactSection() {
   const formRef = useRef(null);
@@ -143,21 +144,17 @@ export default function ContactSection() {
               initial={{ opacity: 0, x: 20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative flex items-center justify-center overflow-hidden p-6 md:p-10"
+              className="relative overflow-hidden min-h-96 w-full flex items-center"
             >
-              <div className="flex flex-col items-center justify-center overflow-hidden">
-                <article className="relative mx-auto h-[350px] md:h-[450px] min-h-60 max-w-[445px] overflow-hidden rounded-lg border p-6 text-3xl tracking-tight md:min-h-80 md:p-8 md:text-4xl md:leading-[1.05] lg:text-5xl text-primary">
-                  Any Design In Mind? Let's Discuss.
-                  <div className="absolute -bottom-20 -right-20 z-10 mx-auto flex h-full w-full max-w-[300px] items-center justify-center transition-all duration-700 hover:scale-105 md:-bottom-28 md:-right-28 md:max-w-[550px]">
-                    <Earth
-                      scale={1.1}
-                      // baseColor={[1, 0, 0.3]}
-                      // markerColor={[0, 0, 0]}
-                      // glowColor={[1, 0.3, 0.4]}
-                    />
-                  </div>
-                </article>
-              </div>
+              <Image
+                src="/contact2.png"
+                alt="abstract chrome design"
+                fill
+                className="absolute top-0 object-cover right-0 bottom-0 left-0 -z-1 dark:opacity-50"
+              />
+              <p className="dark:bg-background/60 bg-background/80 p-5 text-center text-lg w-full">
+                Any Design In Mind? Let's Discuss
+              </p>
             </motion.div>
           </div>
         </div>
