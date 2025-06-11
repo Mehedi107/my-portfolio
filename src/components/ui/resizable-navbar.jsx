@@ -180,25 +180,22 @@ export const MobileNavToggle = ({ isOpen, onClick }) => {
 };
 
 export const NavbarLogo = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
 
-  const isDark = theme === 'dark';
+  const logoSrc =
+    resolvedTheme === 'dark' ? '/logo-light.svg' : '/logo-dark.svg';
+
   return (
     <Link
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <Image
-        src={isDark ? 'logo-light.svg' : 'logo-dark.svg'}
-        alt="logo"
-        width={20}
-        height={20}
-      />
+      <Image src={logoSrc} alt="logo" width={20} height={20} />
     </Link>
   );
 };
@@ -267,7 +264,7 @@ export const ThemeToggler = ({
   variant = 'secondary',
   ...props
 }) => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -292,7 +289,7 @@ export const ThemeToggler = ({
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
     >
-      {theme === 'dark' ? (
+      {resolvedTheme === 'dark' ? (
         <Sun className="h-4 w-4" />
       ) : (
         <Moon className="h-4 w-4" />
