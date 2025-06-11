@@ -10,9 +10,9 @@ import Image from 'next/image';
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="wrapper flex flex-col md:flex-row items-center gap-20 md:gap-6">
+      <div className="wrapper grid grid-cols-12 gap-5">
         {/* left content */}
-        <div className="w-full md:w-2/3 space-y-5">
+        <div className="col-span-12 md:col-span-6 lg:col-span-8 space-y-5">
           <h2>
             <Badge variant="secondary">About</Badge>
           </h2>
@@ -44,7 +44,7 @@ export default function AboutSection() {
           </div>
         </div>
         {/* right content */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+        <div className="col-span-12 md:col-span-6 lg:col-span-4 justify-self-center">
           <Image
             width={300}
             height={300}
