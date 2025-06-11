@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased relative`}>
-        {/* <Preloader /> */}
+        <Preloader />
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavigationBar />

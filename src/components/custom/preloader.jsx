@@ -37,7 +37,7 @@ export default function Preloader() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-2xl font-semibold tracking-widest animate-pulse">
+            <h1 className="text-xl md:text-3xl font-semibold tracking-widest animate-pulse">
               Welcome to My Portfolio
             </h1>
             {/* Replace this with your logo if needed */}
