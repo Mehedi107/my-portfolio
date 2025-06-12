@@ -44,7 +44,7 @@ function ProjectsTab() {
                   {content.technology.map(tech => (
                     <Badge
                       key={tech}
-                      variant="outline"
+                      variant="secondary"
                       className="rounded-full text-muted-foreground"
                     >
                       {tech}

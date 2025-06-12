@@ -41,7 +41,7 @@ export function TabHeader({ children, value }) {
   return (
     <h3
       className={`p-3 cursor-pointer transition-all flex justify-between items-center border-b text-muted-foreground ${
-        activeTab === value ? 'active bg-card' : ''
+        activeTab === value ? 'active bg-card font-semibold' : ''
       }`}
     >
       {children}

@@ -67,7 +67,7 @@ export const NavBody = ({ children, className, visible }) => {
       }}
       className={cn(
         'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-full bg-transparent p-3 px-4 lg:flex dark:bg-transparent border',
-        visible && 'bg-white/10 dark:bg-neutral-950/10',
+        visible && 'bg-background/40',
         className
       )}
     >
