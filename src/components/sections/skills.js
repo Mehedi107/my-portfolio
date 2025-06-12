@@ -33,15 +33,20 @@ export default function SkillSection() {
                 <CardContent className="flex-1">
                   <ul className="flex gap-3 flex-wrap">
                     {skills.map(skill => (
-                      <Button key={skill.id} variant={'secondary'}>
-                        <Image
-                          src={`/icon/${skill.img.src}`}
-                          alt={skill.img.alt}
-                          width={15}
-                          height={15}
-                        />
-                        <span>{skill.name}</span>
-                      </Button>
+                      <li key={skill.id}>
+                        <Button
+                          variant={'secondary'}
+                          aria-label="technology name"
+                        >
+                          <Image
+                            src={`/icon/${skill.img.src}`}
+                            alt={skill.img.alt}
+                            width={15}
+                            height={15}
+                          />
+                          <span>{skill.name}</span>
+                        </Button>
+                      </li>
                     ))}
                   </ul>
                 </CardContent>

@@ -5,7 +5,6 @@ import { motion, useInView } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
 import { useTheme } from 'next-themes';
 import { SparklesCore } from '../ui/sparkles';
 import Image from 'next/image';
@@ -78,12 +77,12 @@ export default function ContactSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    {/* <Label htmlFor="name">Name</Label> */}
                     <Input
                       type="text"
                       name="name"
                       placeholder="Enter your name"
                       required
+                      aria-label="enter you name"
                     />
                   </motion.div>
 
@@ -93,12 +92,12 @@ export default function ContactSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    {/* <Label htmlFor="email">Email</Label> */}
                     <Input
                       type="email"
                       placeholder="Enter your email"
                       required
                       name="email"
+                      aria-label="enter your email"
                     />
                   </motion.div>
                 </div>
@@ -109,12 +108,12 @@ export default function ContactSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  {/* <Label htmlFor="message">Message</Label> */}
                   <Textarea
                     placeholder="Enter your message"
                     name="message"
                     required
                     className="h-40 resize-none"
+                    aria-label="enter your message"
                   />
                 </motion.div>
 

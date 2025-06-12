@@ -25,7 +25,7 @@ export default function Preloader() {
   }, []);
 
   const theme =
-    resolvedTheme === 'dark' ? 'text-neutral-400' : 'text-neutral-500';
+    resolvedTheme === 'dark' ? 'text-neutral-300' : 'text-neutral-500';
 
   return (
     <AnimatePresence>

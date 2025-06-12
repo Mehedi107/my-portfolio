@@ -66,7 +66,7 @@ export const NavBody = ({ children, className, visible }) => {
         minWidth: '800px',
       }}
       className={cn(
-        'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-full bg-transparent p-3 px-4 lg:flex dark:bg-transparent border',
+        'relative z-[60] mx-auto hidden w-full max-w-6xl flex-row items-center justify-between self-start rounded-full bg-transparent p-2 lg:flex dark:bg-transparent border',
         visible && 'bg-background/40',
         className
       )}
@@ -194,6 +194,7 @@ export const NavbarLogo = () => {
     <Link
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      aria-label="site logo"
     >
       <Image src={logoSrc} alt="logo" width={20} height={20} />
     </Link>
@@ -245,6 +246,7 @@ export const NavbarToggleThemeButton = () => {
       size="icon"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className="rounded-full cursor-pointer"
+      aria-label="theme toggler"
     >
       {theme === 'dark' ? (
         <Sun className="h-5 w-5" />

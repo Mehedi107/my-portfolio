@@ -47,7 +47,7 @@ export function NavigationBar() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <ThemeToggler />
+        <ThemeToggler className={'border p-2.5 rounded-full'} />
       </NavBody>
 
       {/* Mobile Navigation */}

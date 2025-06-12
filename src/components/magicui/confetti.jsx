@@ -108,7 +108,7 @@ const ConfettiButtonComponent = ({ options, children, ...props }) => {
   };
 
   return (
-    <Button onClick={handleClick} {...props}>
+    <Button aria-label="confettii button" onClick={handleClick} {...props}>
       {children}
     </Button>
   );

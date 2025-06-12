@@ -24,7 +24,7 @@ export default function AboutSection() {
 
           <SlideInFromBottom delay={0.6}>
             <div className="relative space-x-4 space-y-4 ">
-              <Button asChild>
+              <Button asChild aria-label="view github repo">
                 <Link href="https://github.com/Mehedi107">
                   <FaGithub /> View Github
                 </Link>

@@ -13,6 +13,7 @@ import { Button } from '../ui/button';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 function ProjectsTab() {
   return (
@@ -25,7 +26,8 @@ function ProjectsTab() {
         <TabImageContainer className="md:col-span-7">
           {projectsData.contents.map(content => (
             <TabImage key={content.id} value={content.id}>
-              <img
+              <Image
+                fill
                 src={content.img.src}
                 alt={content.img.alt}
                 className="w-full h-full rounded-md"
@@ -53,20 +55,25 @@ function ProjectsTab() {
                 </div>
                 {/* Buttons */}
                 <div className="flex justify-between items-center gap-5 mt-3">
-                  <Button asChild>
+                  <Button area-label="see live demo" asChild>
                     <Link href={content.liveLink} target="blank">
                       <ExternalLink /> Live Demo
                     </Link>
                   </Button>
 
-                  <Button asChild variant="outline">
+                  <Button
+                    area-label="view code on github"
+                    asChild
+                    variant="outline"
+                  >
                     <Link href={content.githubLink} target="blank">
                       <FaGithub /> View Code
                     </Link>
                   </Button>
                 </div>
 
-                <img
+                <Image
+                  fill
                   src={content.img.src}
                   alt={content.img.alt}
                   className="md:hidden block rounded-md"

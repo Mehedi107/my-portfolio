@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import {Button} from '../ui/button'
+import { Button } from '../ui/button';
 
 export default function SocialLinks() {
   return (
     <div>
-      <Link href={'https://github.com/Mehedi107'} target="blank">
-        <Button variant="ghost" size={'icon'}>
+      <Link
+        href={'https://github.com/Mehedi107'}
+        target="blank"
+        aria-label="github"
+      >
+        <Button variant="ghost" size={'icon'} aria-label="github">
           <svg
             width="80"
             height="80"
@@ -26,7 +30,7 @@ export default function SocialLinks() {
         href={'https://www.linkedin.com/in/mehedi-hasan-developer/'}
         target="blank"
       >
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" aria-label="linkedin">
           <svg
             width="80"
             height="80"
@@ -43,8 +47,12 @@ export default function SocialLinks() {
           </svg>
         </Button>
       </Link>
-      <Link href={'https://x.com/MehediHasa6169'} target="blank">
-        <Button variant="ghost" size="icon">
+      <Link
+        href={'https://x.com/MehediHasa6169'}
+        target="blank"
+        aria-label="twitter"
+      >
+        <Button variant="ghost" size="icon" aria-label="twitter">
           <svg
             width="80"
             height="80"

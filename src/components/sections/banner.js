@@ -42,14 +42,14 @@ const BannerSection = () => {
 
         <SlideInFromBottom delay={0.6}>
           <div className="mt-12 flex items-center justify-center gap-4">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild aria-label="see projects">
               <Link href="#projects">
                 See Projects <FiArrowDownCircle />
               </Link>
             </Button>
 
             <Link href="mailto:mehedi.hsn.dev@gmail.com" target="_blank">
-              <Button size="lg" variant={'outline'}>
+              <Button size="lg" variant={'outline'} aria-label="hire me">
                 Hire Me <HiOutlineMail />
               </Button>
             </Link>
