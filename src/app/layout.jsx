@@ -21,7 +21,12 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.className} antialiased relative`}>
         <Preloader />
 
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           <NavigationBar />
           <main>{children}</main>
           <Footer />

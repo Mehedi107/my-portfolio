@@ -264,8 +264,9 @@ export const ThemeToggler = ({
   variant = 'secondary',
   ...props
 }) => {
-  const { resolvedTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
@@ -282,6 +283,8 @@ export const ThemeToggler = ({
       'bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]',
   };
 
+  console.log('theme', theme);
+
   return (
     <Tag
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -289,7 +292,8 @@ export const ThemeToggler = ({
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
     >
-      {resolvedTheme === 'dark' ? (
+      <span className="sr-only">Toggle theme</span>
+      {theme === 'dark' ? (
         <Sun className="h-4 w-4" />
       ) : (
         <Moon className="h-4 w-4" />

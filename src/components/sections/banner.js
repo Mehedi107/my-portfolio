@@ -10,7 +10,7 @@ import SlideInFromBottom from '../custom/slide-in-from-bottom';
 
 const BannerSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-[calc(100vh-60px)] flex items-center justify-center px-6 overflow-hidden">
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.1}
