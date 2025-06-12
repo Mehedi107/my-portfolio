@@ -18,15 +18,20 @@ export function NavigationBar() {
   const navItems = [
     {
       name: 'Home',
-      link: '#hero',
+      link: '#',
+    },
+    {
+      name: 'About',
+      link: '#about',
+    },
+
+    {
+      name: 'Projects',
+      link: '#projects',
     },
     {
       name: 'Skills',
       link: '#skills',
-    },
-    {
-      name: 'Projects',
-      link: '#projects',
     },
     {
       name: 'Contact',

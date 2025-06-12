@@ -20,7 +20,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-background py-16 sm:py-20"
+      className="relative w-full overflow-hidden bg-background"
     >
       <div
         className="absolute left-20 top-20 h-[250px] w-[250px] rounded-full opacity-10 blur-[100px]"
@@ -35,8 +35,8 @@ export default function ContactSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto px-4 md:px-6 max-w-5xl">
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border bg-secondary/20  backdrop-blur-sm">
+      <div className="relative z-10 mx-auto wrapper">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-xl border bg-secondary/20 backdrop-blur-sm">
           <div className="grid md:grid-cols-2">
             <div className="relative p-6 md:p-10" ref={formRef}>
               <motion.div
@@ -78,7 +78,7 @@ export default function ContactSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <Label htmlFor="name">Name</Label>
+                    {/* <Label htmlFor="name">Name</Label> */}
                     <Input
                       type="text"
                       name="name"
@@ -93,7 +93,7 @@ export default function ContactSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <Label htmlFor="email">Email</Label>
+                    {/* <Label htmlFor="email">Email</Label> */}
                     <Input
                       type="email"
                       placeholder="Enter your email"
@@ -109,7 +109,7 @@ export default function ContactSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <Label htmlFor="message">Message</Label>
+                  {/* <Label htmlFor="message">Message</Label> */}
                   <Textarea
                     placeholder="Enter your message"
                     name="message"
@@ -152,7 +152,7 @@ export default function ContactSection() {
                 className="absolute top-0 object-cover right-0 bottom-0 left-0 -z-1 dark:opacity-50 opacity-80"
               />
               <p className="dark:bg-background/60 bg-background/80 p-5 text-center text-lg w-full">
-                Any Design In Mind? Let's Discuss
+                Any project in mind? Let's discuss.
               </p>
             </motion.div>
           </div>
