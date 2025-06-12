@@ -2,15 +2,17 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useTheme } from 'next-themes';
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     const handleLoad = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 1500); // Small delay after page load
+      }, 3000); // Small delay after page load
     };
 
     // If page is already loaded (like from cache)
@@ -22,6 +24,9 @@ export default function Preloader() {
     }
   }, []);
 
+  const theme =
+    resolvedTheme === 'dark' ? 'text-neutral-400' : 'text-neutral-500';
+
   return (
     <AnimatePresence>
       {isLoading && (
@@ -29,7 +34,7 @@ export default function Preloader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-background text-foreground"
+          className={`fixed inset-0 z-[9999] flex items-center justify-center bg-background text-foreground ${theme}`}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -37,10 +42,7 @@ export default function Preloader() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-xl md:text-3xl font-semibold tracking-widest animate-pulse">
-              Welcome to My Portfolio
-            </h1>
-            {/* Replace this with your logo if needed */}
+            <div className="loader"></div>
           </motion.div>
         </motion.div>
       )}
