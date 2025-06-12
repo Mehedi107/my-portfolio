@@ -27,7 +27,8 @@ function ProjectsTab() {
           {projectsData.contents.map(content => (
             <TabImage key={content.id} value={content.id}>
               <Image
-                fill
+                width={500}
+                height={500}
                 src={content.img.src}
                 alt={content.img.alt}
                 className="w-full h-full rounded-md"
@@ -73,7 +74,8 @@ function ProjectsTab() {
                 </div>
 
                 <Image
-                  fill
+                  width={500}
+                  height={500}
                   src={content.img.src}
                   alt={content.img.alt}
                   className="md:hidden block rounded-md"
